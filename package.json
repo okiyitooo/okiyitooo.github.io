@@ -1,0 +1,22 @@
+{
+  "name": "home",
+  "version": "1.0.0",
+  "description": "My HomePage/Portfolio",
+  "main": "srcs/js\u001b[D\u001b[Dindex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okiyitooo/okiyitooo.github.io.git"
+  },
+  "author": "Kanaetochi Okiyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okiyitooo/okiyitooo.github.io/issues"
+  },
+  "homepage": "https://github.com/okiyitooo/okiyitooo.github.io#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
