@@ -1,16 +1,17 @@
 var express = require('express');
 var bodyParser = require('body-parser')
 var app = express();
-alert("Hello World")
+
+console.log("Hello Express")
 app 		.use(bodyParser.urlencoded({extended: false}))
 		.use(bodyParser.json())
     		.use((req,res,next)=>{
 	    		console.log(req.method+" "+ req.path +" - "+ req.ip);
 			next();
 		})
-		.use('/public',express.static(__dirname + '/src/css'))
+		.use('/css',express.static(__dirname + '/src/css'))
 		.get('/',(req, res)=> {
-      			res.sendFile(__dirname +'/src/html/index.html');
+      			res.sendFile(__dirname +'/index.html');
 	  	})
 		/*.get('/json',(req,res)=>{
 			res.json(
@@ -42,4 +43,7 @@ app 		.use(bodyParser.urlencoded({extended: false}))
 				name:req.body.first +" "+ req.body.last
 			})
 		})*/
+const listener = app.listen(process.env.PORT || 3000, function () {
+  console.log("Node.js listening on port " + listener.address().port);
+});
  module.exports = app;
