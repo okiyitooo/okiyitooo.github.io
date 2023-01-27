@@ -14,6 +14,21 @@
                   padding: 1em 1.5em;
             }
         </style>
+        <script>
+            function play(){
+                document.getElementById('mySoundClip').play()
+            }
+            function search() {
+                document.getElementById('search-results').innerHTML=''
+                collection = document.getElementsByClassName('searchpod')
+//                console.log(collection)
+                for (let i = 0; i < collection.length; i++) {
+                        if (collection[i].classList.contains(document.getElementById('searchbar').value.trim())){
+                            document.getElementById('search-results').innerHTML+=(collection[i]).innerHTML
+                        }
+                    }
+            }
+        </script>
     </head>
     <body>
       <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
@@ -38,18 +53,25 @@
                   <a class="dropdown-item" href="skills/skills.html">Skills</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Refresh<i class="fa fa-refresh" aria-hidden="true"></i></a>
+<!--
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">...</a>
+-->
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#">Give up</a>
+                <a class="nav-link" href="#future" onclick="play()">Plans</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#present">current</a>
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <input id="searchbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeypress="">
+              <div class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" onclick="search()" data-toggle="modal" data-target="#exampleModal2">Search</button>
             </form>
+              
+              
           </div>
         </nav>
         <div class="jumbotron jumbotron-fluid">
@@ -65,7 +87,7 @@
         </div>       
         
         <div class="table w-75 p-3 my-auto mx-auto">
-            <a id="a" href="#" class="disabled" data-toggle="modal" data-target="#exampleModal" onmouseover="document.getElementById('mySoundClip').play()">
+            <a style="text-decoration: none;color: inherit;padding: 1em 1.5em;"id="future" href="#" class="disabled" data-toggle="modal" data-target="#exampleModal" onclick="play()">
                  <div class="card text-white bg-dark mb-3" >
                   <h5 class="card-header">The future <button type="button" class="btn btn-danger btn-small float-right" disabled>Error-OverFlow</button></h5>
                   <div class="card-body">
@@ -97,7 +119,25 @@
                 </div>
               </div>
             </div>
-            <div class="card text-white bg-info mb-3" >
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Results</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" id="search-results">
+                      
+                    </div>
+                  <div class="modal-footer">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id='present' class="card text-white bg-info mb-3" >
               <div class="card-header">The Present<button type="button" class="btn btn-light btn-small float-right" disabled>Now</button></div>
               <div class="card-body">
                 <h5 class="card-title"></h5>
@@ -105,7 +145,7 @@
               </div>
             </div>
 <!--
-            <a id="a" href="<repository-name>/" target="_blank">
+            <a id="a" class="searchpod" href="<repository-name>/" target="_blank">
                  <div class="card">
                   <h5 class="card-header">Name <button type="button" class="btn btn-success btn-small float-right" disabled>MMM YYYY</button></h5>
                   <div class="card-body">
@@ -115,7 +155,7 @@
                 </div>
               </a>
 -->
-            <a id="a" href="Insurance-Prediction/" target="_blank">
+            <a id="a" class="searchpod python dataframes data pandas matplotlib linear regression numpy pyplot modeling model log machine learning scikit sklearn sci-kit " href="Insurance-Prediction/" target="_blank">
                  <div class="card">
                   <h5 class="card-header">Predicting Insurance Costs <button type="button" class="btn btn-success btn-small float-right" disabled>Jan 2023</button></h5>
                   <div class="card-body">
@@ -124,7 +164,7 @@
                   </div>
                 </div>
               </a>
-            <a id="a" href="customer_types/" target="_blank">
+            <a id="a" class="searchpod python dataframes data pandas matplotlib machine learning k-means kmeans cluster clustering  scikit sklearn sci-kit seaborn sns plt" href="customer_types/" target="_blank">
                  <div class="card">
                   <h5 class="card-header">customer_types <button type="button" class="btn btn-success btn-small float-right" disabled>Jan 2023</button></h5>
                   <div class="card-body">
@@ -133,7 +173,7 @@
                   </div>
                 </div>
               </a>
-          <a id="a" href="https://replit.com/@EnochOkiyi/Food" target="_blank">
+          <a id="a" class="searchpod js javascript node" href="https://replit.com/@EnochOkiyi/Food" target="_blank">
               <div class="card" height=100>
                 <h5 class="card-header">FOOD! <button type="button" class="btn btn-primary btn-small float-right" disabled>Mar 2021</button></h5>
                 <div class="card-body h-25 d-inline-block overflow-auto">
@@ -142,7 +182,7 @@
                 </div>
               </div>
           </a>
-        <a id='a' href="catalyst-final-project-jwd/" target="_blank">
+        <a id='a' class="searchpod javascript es6 jquery js " href="catalyst-final-project-jwd/" target="_blank">
           <div class="card">
               <h5 class="card-header">
                   The <kbd>Catalyst</kbd> Project
@@ -155,7 +195,7 @@
                 </div>
             </div>
             </a>
-            <a id="a" href="https://okiyi_jamming.surge.sh/" target="_blank">
+            <a id="a" class="searchpod react api backend codecademy spotify javascript js" href="https://okiyi_jamming.surge.sh/" target="_blank">
                  <div class="card">
                   <h5 class="card-header">Jamming <button type="button" class="btn btn-warning btn-small float-right" disabled>Feb 2021</button></h5>
                   <div class="card-body">
@@ -164,7 +204,7 @@
                   </div>
                 </div>
             </a>
-            <a id="a" href="excursion.github.io/" target="_blank">
+            <a id="a" class="searchpod simple worthless throwback js javascript html shit ass poop dogwater dog-water pathetic weak weaksauce weak_sauce weak-sauce" href="excursion.github.io/" target="_blank">
                  <div class="card">
                   <h5 class="card-header">Excursion <button type="button" class="btn btn-danger btn-small float-right" disabled>Jan 2021</button></h5>
                   <div class="card-body">
@@ -173,7 +213,7 @@
                   </div>
                 </div>
             </a>
-            <a id="a" href="rodaaf.github.io/" target="_blank">
+            <a id="a" class="searchpod simple worthless throwback js javascript html shit ass poop dogwater dog-water pathetic weak weaksauce weak_sauce weak-sauce" href="rodaaf.github.io/" target="_blank">
                 <div class="card">
                   <h5 class="card-header">My First time <button type="button" class="btn btn-danger btn-small float-right" disabled>May 2020</button></h5>
                   <div class="card-body">
@@ -191,6 +231,21 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script>
+        // Get the input field
+            var input = document.getElementById("searchbar");
+
+            // Execute a function when the user presses a key on the keyboard
+            input.addEventListener("keypress", function(event) {
+              // If the user presses the "Enter" key on the keyboard
+              if (event.key === "Enter") {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementById("searchbtn").click();
+              }
+            });
+        </script>
         <script>window.scrollTo(0,document.body.scrollHeight);</script>
     </body>
 
