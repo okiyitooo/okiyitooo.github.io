@@ -1,7 +1,4 @@
-
-<html>
-
-    <head>
+<html><head>
        <title>HomePage</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +11,21 @@
                   color: inherit;
                   padding: 1em 1.5em;
             }
-        </style>
+            .zoom {
+                 transition: all .2s ease-in-out;
+                animation: boble 2s ease-in-out infinite alternate;
+            }
+            .zoom:hover {
+                  animation: smooth 2s ease-in-out infinite alternate; 
+            }
+            @keyframes boble{
+                0%
+                    {transform: scale(1.5);}
+            }
+            @keyframes smooth{
+                100%   {background-color:skyblue;transform: scale(1.6);}
+            }
+</style>
         <script>
             function play(){
                 document.getElementById('mySoundClip').play()
@@ -47,7 +58,7 @@
             }
         </script>
     </head>
-    <body>
+    <body data-q-sc-loaded="true" data-new-gr-c-s-check-loaded="14.1098.0" data-gr-ext-installed="">
       <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">KONavbar</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,55 +94,55 @@
                 <a class="nav-link" href="#present">Current</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0" data-np-autofill-type="other" data-np-checked="1" data-np-watching="1">
               <input id="searchbar" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onkeypress="">
-              <div class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" onclick="search()" data-toggle="modal" data-target="#exampleModal2">Search</button>
-            </form>
+              <div class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" onclick="search()" data-toggle="modal" data-target="#exampleModal2">Search
+            
               
               
-          </div>
-        </nav>
+          </div></form>
+        </div></nav>
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
             <h1 class="display-4">Portfolio
                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-smile" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                  <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"></path>
                 </svg>
             </h1>
             <p class="lead" data-toggle="tooltip" data-placement="left" title="YAY">Projects yay</p>
           </div>
         </div>       
         
-        <div id = 'table' class="table w-75 p-3 my-auto mx-auto">
-            <a style="text-decoration: none;color: inherit;padding: 1em 1.5em;"id="future" href="#" class="disabled" data-toggle="modal" data-target="#exampleModal" onclick="play()">
-                 <div class="card text-white bg-dark mb-3" >
-                  <h5 class="card-header">The future <button type="button" class="btn btn-danger btn-small float-right" disabled>Error-OverFlow</button></h5>
+        <div id="table" class="table w-75 p-3 my-auto mx-auto">
+            <a style="text-decoration: none;color: inherit;padding: 1em 1.5em;" id="future" href="#" class="disabled" data-toggle="modal" data-target="#exampleModal" onclick="play()">
+                 <div class="card text-white bg-dark mb-3">
+                  <h5 class="card-header">The future <button type="button" class="btn btn-danger btn-small float-right" disabled="">Error-OverFlow</button></h5>
                   <div class="card-body">
-                      <h5 class="card-title" style="text-transform: uppercase">I HAVE A DREAM!!! <div class='btn btn-danger'>applause applause thank you thank you 🌹🌹😽😽</div></h5>
+                      <h5 class="card-title" style="text-transform: uppercase">I HAVE A DREAM!!! <div class="btn btn-danger">applause applause thank you thank you 🌹🌹😽😽</div></h5>
                     <p class="card-text">I'll be a machine learning expert, and then, the world!!!</p>
                   </div>
                 </div>
             </a>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" style="color: red;border-bottom: 1px solid red;"tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal" style="color: red;border-bottom: 1px solid red;" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
-                <div class="modal-content"style="background-color: #ffc107;">
+                <div class="modal-content" style="background-color: #ffc107;">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">STOP!</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
+                      <span aria-hidden="true">×</span>
                     </button>
                   </div>
                   <div class="modal-body">
                     Can't access +
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-infinity" viewBox="0 0 16 16">
-                      <path d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015L8 6.978Zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916L8.656 7.75Z"/>
+                      <path d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015L8 6.978Zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916L8.656 7.75Z"></path>
                     </svg>
                   </div>
-                  <div class="modal-footer"style="border-top: 1px solid red;">
+                  <div class="modal-footer" style="border-top: 1px solid red;">
                     <button type="button" class="btn btn-danger" data-dismiss="modal" style="border-top: 1px solid #dee2e6;border-bottom: 1px solid black">Error</button>
-                    <button type="button" class="btn btn-danger"style="border-top: 1px solid #dee2e6;border-bottom: 1px solid black">Error</button>
+                    <button type="button" class="btn btn-danger" style="border-top: 1px solid #dee2e6;border-bottom: 1px solid black">Error</button>
                   </div>
                 </div>
               </div>
@@ -141,9 +152,9 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 id='search-title' class="modal-title " id="exampleModalLabel2"></h5>
+                    <h5 id="search-title" class="modal-title "></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
+                      <span aria-hidden="true">×</span>
                     </button>
                   </div>
                   <div class="modal-body" id="search-results">
@@ -154,8 +165,8 @@
                 </div>
               </div>
             </div>
-            <div id='present' class="card text-white bg-info mb-3" >
-              <div class="card-header">The Present<button type="button" class="btn btn-light btn-small float-right" disabled>Now</button></div>
+            <div id="present" class="card text-white bg-info mb-3">
+              <div class="card-header">The Present<button type="button" class="btn btn-light btn-small float-right" disabled="">Now</button></div>
               <div class="card-body">
                 <h5 class="card-title"></h5>
                   <p class="card-text">I'm currently learning Machine learning as a personal challenge, I've become well versed with pandas, numpy, and matplotlib and gained expertise in <span class="badge badge-warning">Data Science</span>, when I become decent at it, I'll be able to make my games more complex which is awesome. Man that is going to be so awesome</p>
@@ -172,9 +183,29 @@
                 </div>
               </a>
 -->
+    <a href="resume" download=""> <div class="rounded-circle zoom" style="width: 100px;  height: 100;  background-color: rgb(127 188 255);  position: absolute;  z-index: 1;  bottom: -381px;  right: 45px; border-style: outset hidden">
+        <svg fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 307.454 307.454" xml:space="preserve" style="padding: 15;">
+            <g id="SVGRepo_bgCarrier" stroke-width="0">
+            </g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+            </g>
+            <g id="SVGRepo_iconCarrier"> 
+                <g> <g id="Layer_5_29_"> 
+                    <g> 
+                        <g> 
+                            <g> 
+                                <path d="M241.19,200.541c0,2.691-2.201,4.895-4.893,4.895H71.158c-2.693,0-4.895-2.203-4.895-4.895v-3.261 c0-2.691,2.201-4.894,4.895-4.894h165.139c2.691,0,4.893,2.202,4.893,4.894L241.19,200.541L241.19,200.541z"></path> </g> <g> <path d="M140.219,64.99c0,2.69-2.201,4.893-4.895,4.893H71.158c-2.693,0-4.895-2.202-4.895-4.893v-3.263 c0-2.691,2.201-4.894,4.895-4.894h64.166c2.693,0,4.895,2.202,4.895,4.894V64.99z"></path> </g> <g> <path d="M238.713,245.727c0,2.69-2.203,4.892-4.897,4.892H169.65c-2.693,0-4.895-2.202-4.895-4.892v-3.263 c0-2.691,2.201-4.894,4.895-4.894h64.166c2.693,0,4.897,2.202,4.897,4.894V245.727z"></path> </g> <g> <path d="M174.238,110.172c0,2.691-2.201,4.895-4.893,4.895H71.157c-2.693,0-4.895-2.203-4.895-4.895v-3.261 c0-2.691,2.201-4.893,4.895-4.893h98.188c2.691,0,4.893,2.202,4.893,4.893V110.172z"></path> </g> <g> <path d="M241.19,155.357c0,2.691-2.201,4.893-4.893,4.893H71.158c-2.693,0-4.895-2.202-4.895-4.893v-3.262 c0-2.691,2.201-4.894,4.895-4.894h165.139c2.691,0,4.893,2.202,4.893,4.894L241.19,155.357L241.19,155.357z"></path> </g> </g> <path d="M272.401,74.521L193.278,9.454C186.727,4.062,175.389,0,166.907,0H42.442c-10.76,0-19.516,8.754-19.516,19.516 c0,0,0,210.024,0,267.839c0,20.099,19.01,20.099,19.463,20.099c48.34,0,222.623,0,222.623,0c10.762,0,19.516-8.755,19.516-19.517 V100.198C284.528,91.247,279.313,80.207,272.401,74.521z M187.867,29.475c0-4.781,3.959-1.113,3.959-1.113l62.717,53.585 c0,0,4.014,3.949-2.865,3.949c-14.688,0-58.746,0-58.746,0c-2.793,0-5.065-2.271-5.065-5.064 C187.867,80.832,187.867,42.315,187.867,29.475z M265.012,292.999c0,0-179.055,0-223.99,0c-0.801,0-3.643-0.229-3.643-4.182 c0-54.407,0-269.302,0-269.302c0-2.745,2.32-5.063,5.063-5.063h124.464c2.107,0,6.51,1.118,6.51,7.138v59.242 c0,10.761,8.754,19.516,19.516,19.516h73.523c1.342,0,3.613,0.922,3.613,4.169c0,0.051,0.008,183.419,0.008,183.419 C270.076,290.729,267.805,292.999,265.012,292.999z">
+                        </path> 
+                    </g> 
+                    </g> 
+                </g> 
+            </g>
+        </svg>
+        </div>
+            </a>
             <a id="a" class="searchpod magic inline Numpy Pandas pd Matplotlib plt pytplot  python dataframes data pandas matplotlib logistic regression numpy pyplot modeling model log machine ml learning scikit sklearn sci-kit logistic regression modeling" href="Logistic-Regression-Modeling-in-Python/" target="_blank">
                  <div class="card">
-                  <h5 class="card-header">Classifying Heart Disease with Logistic Regression <button type="button" class="btn btn-success btn-small float-right" disabled>Feb 2023</button></h5>
+                  <h5 class="card-header">Classifying Heart Disease with Logistic Regression <button type="button" class="btn btn-success btn-small float-right" disabled="">Feb 2023</button></h5>
                   <div class="card-body">
                     <h5 class="card-title">
 Logistic Regression Modeling in Python</h5>
@@ -184,7 +215,7 @@ Logistic Regression Modeling in Python</h5>
               </a>
             <a id="a" class="searchpod magic inline Numpy Pandas pd python Seaborn sns dataframes data pandas matplotlib linear regression numpy pyplot modeling model log machine ml learning scikit sklearn sci-kit stochastic gradient descent linear regression" href="Stochastic-Gradient-Descent-on-Linear-Regression/" target="_blank">
                  <div class="card">
-                  <h5 class="card-header">Stochastic Gradient Descent on Linear Regression <button type="button" class="btn btn-success btn-small float-right" disabled>Feb 2023</button></h5>
+                  <h5 class="card-header">Stochastic Gradient Descent on Linear Regression <button type="button" class="btn btn-success btn-small float-right" disabled="">Feb 2023</button></h5>
                   <div class="card-body">
                     <h5 class="card-title">SDGRegressor to Predict Crowdness at the Gym</h5>
                     <p class="card-text">
@@ -196,7 +227,7 @@ Logistic Regression Modeling in Python</h5>
               </a>
             <a id="a" class="searchpod python dataframes data pandas matplotlib linear regression numpy pyplot modeling model log machine ml learning scikit sklearn sci-kit " href="Insurance-Prediction/" target="_blank">
                  <div class="card">
-                  <h5 class="card-header">Predicting Insurance Costs <button type="button" class="btn btn-success btn-small float-right" disabled>Jan 2023</button></h5>
+                  <h5 class="card-header">Predicting Insurance Costs <button type="button" class="btn btn-success btn-small float-right" disabled="">Jan 2023</button></h5>
                   <div class="card-body">
                     <h5 class="card-title">This was my first project using linear regression</h5>
                     <p class="card-text">In this project I went through the process of examining a dataset, constructing a model, and evaluating its predictive ability. I think my explanations of the techniques I used and the results I got were top notch. I also improved my Markdown skills around this time, you should see an equation i put in a tab just for kicks. </p>
@@ -205,7 +236,7 @@ Logistic Regression Modeling in Python</h5>
               </a>
             <a id="a" class="searchpod python dataframes data pandas matplotlib machine ml learning k-means kmeans cluster clustering  scikit sklearn sci-kit seaborn sns plt" href="customer_types/" target="_blank">
                  <div class="card">
-                  <h5 class="card-header">Customer Types <button type="button" class="btn btn-success btn-small float-right" disabled>Jan 2023</button></h5>
+                  <h5 class="card-header">Customer Types <button type="button" class="btn btn-success btn-small float-right" disabled="">Jan 2023</button></h5>
                   <div class="card-body">
                     <h5 class="card-title">This project represents the progress I've made in the past few months towards being a data scientist</h5>
                     <p class="card-text">This project uses clustering(an unsupervised machine learning technique) to find varying customer types for a business, it could be used to decide which to advertise a particular product to, to find the most valuable customers, and general business logics. It also shows some of my learned knowledge of pandas and matplotlib</p>
@@ -213,15 +244,15 @@ Logistic Regression Modeling in Python</h5>
                 </div>
               </a>
           <a id="a" class="searchpod js javascript node" href="https://replit.com/@EnochOkiyi/Food" target="_blank">
-              <div class="card" height=100>
-                <h5 class="card-header">FOOD! <button type="button" class="btn btn-primary btn-small float-right" disabled>Mar 2021</button></h5>
+              <div class="card" height="100">
+                <h5 class="card-header">FOOD! <button type="button" class="btn btn-primary btn-small float-right" disabled="">Mar 2021</button></h5>
                 <div class="card-body h-25 d-inline-block overflow-auto">
                   <h5 class="card-title">My first javascript game!</h5>
                   <p class="card-text">I made this text based game in <span class="badge badge-warning">Javascript</span> and I'm planning on recreating it in kotlin when I'm done studying machine learning.</p>
                 </div>
               </div>
           </a>
-        <a id='a' class="searchpod javascript es6 jquery js " href="catalyst-final-project-jwd/" target="_blank">
+        <a id="a" class="searchpod javascript es6 jquery js " href="catalyst-final-project-jwd/" target="_blank">
           <div class="card">
               <h5 class="card-header">
                   The <kbd>Catalyst</kbd> Project
@@ -236,7 +267,7 @@ Logistic Regression Modeling in Python</h5>
             </a>
             <a id="a" class="searchpod jamming surge sh react api backend codecademy spotify javascript js" href="https://okiyi_jamming.surge.sh/" target="_blank">
                  <div class="card">
-                  <h5 class="card-header">Jamming <button type="button" class="btn btn-warning btn-small float-right" disabled>Feb 2021</button></h5>
+                  <h5 class="card-header">Jamming <button type="button" class="btn btn-warning btn-small float-right" disabled="">Feb 2021</button></h5>
                   <div class="card-body">
                     <h5 class="card-title">I learned a lot about web development from codecademy</h5>
                     <p class="card-text">This is a react app for adding songs to your Spotify playlist, it is hosted with surge. My work was mostly done in React for positioning of elements,etc The spotify API does most of the work, all I really did was fetch the data.</p>
@@ -245,7 +276,7 @@ Logistic Regression Modeling in Python</h5>
             </a>
             <a id="a" class="searchpod simple worthless throwback js javascript html shit ass poop dogwater dog-water pathetic weak weaksauce weak_sauce weak-sauce" href="excursion.github.io/" target="_blank">
                  <div class="card">
-                  <h5 class="card-header">Excursion <button type="button" class="btn btn-danger btn-small float-right" disabled>Jan 2021</button></h5>
+                  <h5 class="card-header">Excursion <button type="button" class="btn btn-danger btn-small float-right" disabled="">Jan 2021</button></h5>
                   <div class="card-body">
                     <h5 class="card-title">A project learned from codecademy, despite what it may say, updates are not coming</h5>
                     <p class="card-text">It creates a base for an app that plans travels</p>
@@ -254,7 +285,7 @@ Logistic Regression Modeling in Python</h5>
             </a>
             <a id="a" class="searchpod simple worthless throwback js javascript html shit ass poop dogwater dog-water pathetic weak weaksauce weak_sauce weak-sauce" href="rodaaf.github.io/" target="_blank">
                 <div class="card">
-                  <h5 class="card-header">My First time <button type="button" class="btn btn-danger btn-small float-right" disabled>May 2020</button></h5>
+                  <h5 class="card-header">My First time <button type="button" class="btn btn-danger btn-small float-right" disabled="">May 2020</button></h5>
                   <div class="card-body">
                     <h5 class="card-title">Long long ago</h5>
                     <p class="card-text">An html page was made</p>
@@ -263,7 +294,7 @@ Logistic Regression Modeling in Python</h5>
             </a>
         </div>
         <audio id="mySoundClip">
-        <source src='https://www.pacdv.com/sounds/applause-sound/app-5.mp3' type='audio/mp3'>
+        <source src="https://www.pacdv.com/sounds/applause-sound/app-5.mp3" type="audio/mp3">
         </audio>
         <div class="fixed-bottom">
         </div>
@@ -291,6 +322,7 @@ Logistic Regression Modeling in Python</h5>
             modalObj.on('show.bs.modal', function(event) { console.log("show.bs.modal event") });
         </script>
         <script>window.scrollTo(0,document.body.scrollHeight);</script>
-    </body>
+    
 
-</html>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
