@@ -23,10 +23,16 @@
       padding: 20px;
     }
 
+    .projects-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
     .searchpod {
-      display: block;
+      width: 48%; /* Two cards per row */
       margin-bottom: 20px;
-      text-decoration: none; /* Remove default link underline */
+      text-decoration: none;
     }
 
     .card {
@@ -36,25 +42,27 @@
     }
 
     .card:hover {
-      transform: translateY(-5px); /* Slightly lift the card on hover */
+      transform: translateY(-5px);
     }
 
     .card-header {
       background-color: #333;
       color: #fff;
       border-bottom: none;
+      padding: 0.5rem 1rem; /* Reduced padding */
     }
 
     .card-body {
-      padding: 20px;
+      padding: 1rem; /* Reduced padding */
     }
 
     .card-text {
       color: #666;
+      margin-bottom: 0.5rem; /* Reduced margin */
     }
   </style>
 </head>
-<body>
+  <body>
   <header>
     <h1>Projects</h1>
   </header><!DOCTYPE html>
