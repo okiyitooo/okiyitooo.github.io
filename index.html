@@ -17,7 +17,8 @@
         projects.forEach(project => {
           const link = document.createElement('a');
           link.id = 'a'; 
-          link.classList.add('searchpod', ...project.tags); 
+          const sanitizedTags = project.tags.map(tag => tag.replace(/ /g, '-')); 
+          link.classList.add('searchpod', ...sanitizedTags);
           link.href = project.website;
           link.target = '_blank';
 
