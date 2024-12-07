@@ -64,7 +64,6 @@
     fetch('projects.json')
       .then(response => response.json())
       .then(projects => {
-        console.log(projects)
         const container = document.getElementById('projects-container');
         projects.forEach(project => {
           const link = document.createElement('a');
