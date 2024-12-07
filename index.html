@@ -2,11 +2,304 @@
 <html>
 <head>
   <title>Projects</title>
-  <link rel="stylesheet" crossorigin="anonymous" href="src/css/index.css"/>
+<!--   <link rel="stylesheet" crossorigin="anonymous" href="src/css/index.css"/> -->
   <link rel="stylesheet" crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+
+
+body {
+
+  font-family: 'Roboto', sans-serif;
+
+  background-color: #f8f9fa;
+
+  margin: 0;
+
+}
+
+
+
+header {
+
+  background-color: #000;
+
+  color: #fff;
+
+  padding: 2rem 3rem;
+
+  text-align: center;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border-bottom: 2px solid #f08080;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+
+header::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(to right, #e91e63, #ff69b4);
+
+  opacity: 0.15;
+
+  z-index: -1;
+
+}
+
+
+
+header h1 {
+
+  margin: 0;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 3rem;
+
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+.social-links a {
+
+  color: #fff;
+
+  margin-left: 25px;
+
+  font-size: 1.8rem;
+
+  transition: transform 0.2s ease;
+
+}
+
+
+
+.social-links a:hover {
+
+  transform: translateY(-3px);
+
+}
+
+
+
+/* Particle animation */
+
+.particle {
+
+  position: absolute;
+
+  background-color: rgba(255, 255, 255, 0.8); /* More opaque particles */
+
+  border-radius: 50%;
+
+  opacity: 0;
+
+  animation: particleAnimation 10s linear infinite;
+
+  z-index: 1; /* Place particles above other header content */
+
+}
+
+
+
+@keyframes particleAnimation {
+
+  0% {
+
+    transform: translate(0, -50%) scale(0);
+
+    opacity: 0;
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+  }
+
+  100% {
+
+    transform: translate(100vw, 50%) scale(1.5);
+
+    opacity: 0;
+
+  }
+
+}
+
+
+
+.container {
+
+  padding: 30px;
+
+}
+
+
+
+.projects-row {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+
+}
+
+
+
+.searchpod {
+
+  width: 48%;
+
+  margin-bottom: 30px;
+
+  text-decoration: none;
+
+  transition: transform 0.2s ease;
+
+}
+
+
+
+.searchpod:hover {
+
+  transform: translateY(-5px);
+
+}
+
+
+
+.card {
+
+  border: none;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+}
+
+
+
+.card-header {
+
+  background-color: #333;
+
+  color: #fff;
+
+  border-bottom: none;
+
+  padding: 0.7rem 1.5rem;
+
+  font-weight: bold;
+
+}
+
+
+
+.card-img-top {
+
+  height: 200px;
+
+  object-fit: cover;
+
+}
+
+
+
+.card-body {
+
+  padding: 1.5rem;
+
+}
+
+
+
+.card-text {
+
+  color: #555;
+
+  margin-bottom: 0.7rem;
+
+}
+
+
+
+#download-resume {
+
+  position: fixed;
+
+  bottom: 30px;
+
+  left: 30px;
+
+  background-color: #f08080;
+
+  color: #fff;
+
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  font-weight: bold;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+
+
+#download-resume:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+}
+</style>
 </head>
   <body>
   <header>
@@ -19,6 +312,32 @@
         <i class="fab fa-github"></i>
       </a>
     </div>
+    <div class="particle" style="width: 10px; height: 10px; left: 10%; animation-duration: 8s;"></div>
+    <div class="particle" style="width: 5px; height: 5px; left: 30%; animation-duration: 12s;"></div>
+    <div class="particle" style="width: 15px; height: 15px; left: 60%; animation-duration: 15s;"></div>
+    <div class="particle" style="width: 8px; height: 8px; left: 80%; animation-duration: 10s;"></div>
+    <div class="particle" style="width: 12px; height: 12px; left: 95%; animation-duration: 9s;"></div> 
+    <div class="particle" style="width: 25px; height: 25px; left: 5%; animation-duration: 11s;"></div>
+    <div class="particle" style="width: 35px; height: 35px; left: 25%; animation-duration: 13s;"></div>
+    <div class="particle" style="width: 18px; height: 18px; left: 45%; animation-duration: 7s;"></div>
+    <div class="particle" style="width: 7px; height: 7px; left: 65%; animation-duration: 14s;"></div>
+    <div class="particle" style="width: 11px; height: 11px; left: 85%; animation-duration: 6s;"></div>
+    <div class="particle" style="width: 50px; height: 50px; left: 2%; animation-duration: 53s;"></div> 
+    <div class="particle" style="width: 30px; height: 30px; left: 18%; animation-duration: 16s;"></div>
+    <div class="particle" style="width: 40px; height: 40px; left: 38%; animation-duration: 8s;"></div>
+    <div class="particle" style="width: 22px; height: 22px; left: 58%; animation-duration: 12s;"></div>
+    <div class="particle" style="width: 14px; height: 14px; left: 78%; animation-duration: 100s;"></div>
+    <div class="particle" style="width: 9px; height: 9px; left: 93%; animation-duration: 90s;"></div>
+    <div class="particle" style="width: 45px; height: 45px; left: 15%; animation-duration: 11s;"></div>
+    <div class="particle" style="width: 28px; height: 28px; left: 35%; animation-duration: 13s;"></div>
+    <div class="particle" style="width: 38px; height: 38px; left: 55%; animation-duration: 19s;"></div>
+    <div class="particle" style="width: 16px; height: 16px; left: 75%; animation-duration: 70s;"></div>
+    <div class="particle" style="width: 6px; height: 6px; left: 90%; animation-duration: 14s;"></div>
+    <div class="particle" style="width: 42px; height: 42px; left: 7%; animation-duration: 17s;"></div>
+    <div class="particle" style="width: 20px; height: 20px; left: 27%; animation-duration: 16s;"></div>
+    <div class="particle" style="width: 32px; height: 32px; left: 47%; animation-duration: 8s;"></div>
+    <div class="particle" style="width: 24px; height: 24px; left: 67%; animation-duration: 12s;"></div>
+    <div class="particle" style="width: 13px; height: 13px; left: 87%; animation-duration: 10s;"></div>
   </header>
   <div class="container">
     <div class="projects-row" id="projects-container"></div>
@@ -26,48 +345,6 @@
   <a href="resume.pdf" download id="download-resume">Download Resume</a>
 
   <script>
-    const header = document.querySelector('header');
-
-    for (let i = 0; i < 30; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-    
-      // Randomize size
-      const size = Math.random() * 50 + 5; // 5px to 55px
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-    
-      // Randomize horizontal position
-      particle.style.left = `${Math.random() * 100}%`;
-    
-      // Randomize animation duration (speed)
-      const duration = Math.random() * 10 + 5; // 5s to 15s
-      particle.style.animationDuration = `${duration}s`;
-    
-      // Randomize vertical destination within the header
-      const headerHeight = header.clientHeight; 
-      const destinationY = Math.random() * headerHeight; 
-      particle.style.animationName = `particleAnimation-${i}`; 
-    
-      // Create a unique @keyframes rule for each particle
-      const styleSheet = document.styleSheets[0]; // Get the first stylesheet
-      const keyframesRule = `@keyframes particleAnimation-${i} {
-        0% {
-          transform: translateX(0) translateY(0) scale(0);
-          opacity: 0;
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          transform: translateX(100vw) translateY(${destinationY}px) scale(1.5);
-          opacity: 0;
-        }
-      }`;
-      styleSheet.insertRule(keyframesRule, styleSheet.cssRules.length);
-    
-      header.appendChild(particle);
-    }
     fetch('projects.json')
       .then(response => response.json())
       .then(projects => {
