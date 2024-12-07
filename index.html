@@ -2,7 +2,11 @@
 <html>
 <head>
   <title>Projects</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">   
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link   
+ rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     body {
@@ -17,6 +21,9 @@
       color: #fff;
       padding: 1rem 0;
       text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .container {
@@ -60,15 +67,47 @@
       color: #666;
       margin-bottom: 0.5rem; /* Reduced margin */
     }
+
+    .social-links a {
+      color: #fff;
+      margin-left: 20px;
+      font-size: 1.5rem;
+    }
+
+    #download-resume {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #ff69b4; /* Pretty pink color */
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.2s ease;
+    }
+    #download-resume:hover {
+      background-color: #ff4d94; /* Darker pink on hover */
+    }
   </style>
 </head>
   <body>
   <header>
     <h1>Projects</h1>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/tochi-okiyi-ba5344123/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/okiyitooo/" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </header>
   <div class="container">
     <div class="projects-row" id="projects-container"></div>
   </div>
+  <a href="resume.pdf" download id="download-resume">Download Resume</a>
 
   <script>
     fetch('projects.json')
